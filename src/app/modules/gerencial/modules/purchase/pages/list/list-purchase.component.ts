@@ -21,7 +21,7 @@ export class ListPurchaseComponent implements OnInit {
   public columns: Column[] = [
     { label: 'Código', key: 'id', type: 'text' },
     { label: 'Cliente', key: 'clientName', type: 'text' },
-    { label: 'Produto', key: 'productName', type: 'text' },
+    { label: 'Produtos qtd', key: 'products', type: 'text' },
     { label: 'Valor (R$)', key: 'amount', type: 'currency' },
     { label: 'Status', key: 'status', type: 'text' },
     { label: 'Data transação', key: 'createdAt', type: 'date' },
