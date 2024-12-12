@@ -2,6 +2,7 @@ import { AfterViewInit, Component, EventEmitter, Input, OnChanges, Output, Simpl
 import { MatPaginator, MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTable, MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { TextTooLargePipe } from '../../pipes/text-too-large/text-too-large.pipe';
 
 export type Column = {
   label: string;
@@ -23,6 +24,7 @@ export type PaginationEvent = {
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    TextTooLargePipe,
   ],
 })
 export class CommomTableComponent<T> implements OnChanges, AfterViewInit {

@@ -5,7 +5,7 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ item.label }}</th>
         @switch (item.type) {
           @default {
-            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) }}</td>
+            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | textTooLarge }}</td>
           }
         }
       </ng-container>
