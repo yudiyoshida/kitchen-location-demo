@@ -4,26 +4,8 @@
       <ng-container [matColumnDef]="item.key">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ item.label }}</th>
         @switch (item.type) {
-          @case ('date') {
-            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | date:'dd/MM/yyyy' }}</td>
-          }
-          @case ('currency') {
-            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | priceInCents }}</td>
-          }
-          @case ('document') {
-            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | document }}</td>
-          }
-          @case ('phone') {
-            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | phone }}</td>
-          }
-          @case ('status') {
-            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | status }}</td>
-          }
-          @case ('blocked') {
-            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | blocked }}</td>
-          }
           @default {
-            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | textTooLarge }}</td>
+            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) }}</td>
           }
         }
       </ng-container>
@@ -39,7 +21,7 @@
 <mat-paginator #paginator
   [length]="totalItems"
   [pageIndex]="0"
-  [pageSize]="10"
+  [pageSize]="5"
   [pageSizeOptions]="[5, 10, 20, 100]"
   (page)="onPageChange($event)"
 />

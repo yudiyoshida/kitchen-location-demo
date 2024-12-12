@@ -1,14 +1,7 @@
-import { DatePipe } from '@angular/common';
 import { AfterViewInit, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTable, MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { BlockedPipe } from '../../pipes/blocked/blocked.pipe';
-import { DocumentPipe } from '../../pipes/document/document.pipe';
-import { PhonePipe } from '../../pipes/phone/phone.pipe';
-import { PriceInCentsPipe } from '../../pipes/price-in-cents/price-in-cents.pipe';
-import { StatusPipe } from '../../pipes/status/status.pipe';
-import { TextTooLargePipe } from '../../pipes/text-too-large/text-too-large.pipe';
 
 export type Column = {
   label: string;
@@ -27,13 +20,6 @@ export type PaginationEvent = {
   templateUrl: './commom-table.component.html',
   styleUrl: './commom-table.component.scss',
   imports: [
-    BlockedPipe,
-    DatePipe,
-    DocumentPipe,
-    PhonePipe,
-    PriceInCentsPipe,
-    StatusPipe,
-    TextTooLargePipe,
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,

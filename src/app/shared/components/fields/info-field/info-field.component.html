@@ -1,26 +1,8 @@
 <div>
   <p class="font-bold">{{ label }}</p>
   @switch (type) {
-    @case ('date') {
-      <p>{{ value | date: 'dd/MM/yyyy' }}</p>
-    }
-    @case ('currency') {
-      <p>{{ value | currency: 'BRL' }}</p>
-    }
-    @case ('document') {
-      <p>{{ value | document }}</p>
-    }
-    @case ('phone') {
-      <p>{{ value | phone }}</p>
-    }
-    @case ('status') {
-      <p>{{ value | status }}</p>
-    }
-    @case ('blocked') {
-      <p>{{ value | blocked }}</p>
-    }
     @default {
-      <p>{{ value.length ? value : 'Não informado' }}</p>
+      <p>{{ value?.length ? value : 'Não informado' }}</p>
     }
   }
 </div>

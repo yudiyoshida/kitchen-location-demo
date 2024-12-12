@@ -10,4 +10,8 @@ export const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./modules/home/home.routes').then(m => m.routes),
   },
+  {
+    path: 'gerencial',
+    loadChildren: () => import('./modules/gerencial/gerencial.routes').then(m => m.routes),
+  },
 ];
