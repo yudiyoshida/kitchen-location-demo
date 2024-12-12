@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-content>
+    <div class="grid md:grid-cols-4 gap-7">
+      <app-info-field label="Código da compra" type="text" [value]="'#' + purchase?.id" />
+      <app-info-field label="Cliente" type="text" [value]="purchase?.clientName" />
+      <app-info-field label="Valor" type="currency" [value]="purchase?.amount" />
+      <app-info-field label="Mais informações" type="text" value="..." />
+    </div>
+    <app-timeline [events]="events" />
+    <div class="flex justify-end">
+      <app-button-flat label="Alterar status" />
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<div class="grid gap-4 mt-8">
+  <h2 class=" text-xl font-bold">Lista de produtos</h2>
+  @for (product of products; track product.id) {
+    <app-product-info [product]="product" />
+  }
+</div>

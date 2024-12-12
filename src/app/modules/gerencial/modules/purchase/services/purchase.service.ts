@@ -9,54 +9,54 @@ export class PurchaseService {
     {
       id: '1',
       clientName: 'João da Silva',
-      productName: 'Produto 1',
       amount: 100.00,
       status: 'Pendente',
+      products: 1,
       createdAt: '12/12/2024',
       updatedAt: '12/12/2024',
     },
     {
       id: '2',
       clientName: 'Maria da Silva',
-      productName: 'Produto 2',
       amount: 200.00,
       status: 'Pago',
+      products: 2,
       createdAt: '12/12/2024',
       updatedAt: '12/12/2024',
     },
     {
       id: '3',
       clientName: 'José da Silva',
-      productName: 'Produto 3',
       amount: 300.00,
       status: 'Pendente',
+      products: 3,
       createdAt: '12/12/2024',
       updatedAt: '12/12/2024',
     },
     {
       id: '4',
       clientName: 'Pedro da Silva',
-      productName: 'Produto 4',
       amount: 400.00,
       status: 'Cancelado',
+      products: 4,
       createdAt: '12/12/2024',
       updatedAt: '12/12/2024',
     },
     {
       id: '5',
       clientName: 'Ana da Silva',
-      productName: 'Produto 5',
       amount: 500.00,
       status: 'Pendente',
+      products: 5,
       createdAt: '12/12/2024',
       updatedAt: '12/12/2024',
     },
     {
       id: '6',
       clientName: 'Paulo da Silva',
-      productName: 'Produto 6',
       amount: 600.00,
       status: 'Pendente',
+      products: 6,
       createdAt: '12/12/2024',
       updatedAt: '12/12/2024',
     },
@@ -76,17 +76,9 @@ export class PurchaseService {
 export type PurchaseResponse = {
   id: string;
   clientName: string;
-  productName: string;
   amount: number;
   status: string;
   createdAt: string;
   updatedAt: string;
-  products?: PurchaseProduct[];
-}
-
-export type PurchaseProduct = {
-  id: string;
-  name: string;
-  quantity: number;
-  imageUrl: string;
+  products: number;
 }

@@ -1,6 +1,12 @@
 <div>
   <p class="font-bold">{{ label }}</p>
   @switch (type) {
+    @case ('number') {
+      <p>{{ value }}</p>
+    }
+    @case ('currency') {
+      <p>{{ value | currency: 'BRL' }}</p>
+    }
     @default {
       <p>{{ value?.length ? value : 'Não informado' }}</p>
     }

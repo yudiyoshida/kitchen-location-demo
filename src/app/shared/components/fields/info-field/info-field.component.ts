@@ -1,3 +1,4 @@
+import { CurrencyPipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -5,10 +6,12 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   templateUrl: './info-field.component.html',
   styleUrl: './info-field.component.scss',
-  imports: [],
+  imports: [
+    CurrencyPipe,
+  ],
 })
 export class InfoFieldComponent {
   @Input({ required: true }) label!: string;
   @Input({ required: true }) value!: any;
-  @Input() type!: 'text' | 'date' | 'currency' | 'document' | 'phone' | 'status' | 'blocked';
+  @Input() type!: 'text' | 'date' | 'currency' | 'document' | 'phone' | 'status' | 'blocked' | 'number';
 }
