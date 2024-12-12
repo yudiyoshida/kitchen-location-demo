@@ -23,6 +23,7 @@ export class ListProductsComponent implements OnInit {
   public columns: Column[] = [
     { label: 'Nome', key: 'name', type: 'text' },
     { label: 'Descrição', key: 'description', type: 'text' },
+    { label: 'Categoria', key: 'category', type: 'text' },
     { label: 'Em estoque', key: 'stock', type: 'text' },
     { label: 'Produto cadastrado em', key: 'createdAt', type: 'date' },
   ];

@@ -1,11 +1,12 @@
 <mat-card>
   <mat-card-content>
-    <div class="grid md:grid-cols-[auto_auto_1fr] gap-7">
+    <div class="grid md:grid-cols-[auto_1fr_1fr_1fr_1fr] gap-7">
       <app-photo-field [imageUrl]="product?.imageUrl" alt="foto do produto" class="md:row-span-2" />
       <app-info-field label="Nome" type="text" [value]="product?.name" />
-      <app-info-field label="Descrição" type="text" [value]="product?.description" />
+      <app-info-field label="Categoria" type="text" [value]="product?.category" />
       <app-info-field label="Estoque" type="number" [value]="product?.stock" />
       <app-info-field label="Mais informações" type="text" value="..." />
+      <app-info-field label="Descrição" type="text" [value]="product?.description" class="md:col-span-4" />
     </div>
   </mat-card-content>
 </mat-card>
