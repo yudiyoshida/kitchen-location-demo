@@ -38,7 +38,7 @@ export class FinancialService {
       clientName: 'Pedro da Silva',
       productName: 'Produto 4',
       amount: 400.00,
-      status: 'Pendente',
+      status: 'Cancelado',
       createdAt: '12/12/2024',
       updatedAt: '12/12/2024',
     },
