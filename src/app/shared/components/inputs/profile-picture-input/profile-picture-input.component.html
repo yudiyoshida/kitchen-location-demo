@@ -1,0 +1,20 @@
+<div class="text-center">
+  <img
+    class="h-28 w-28 rounded-full border border-black mx-auto cursor-pointer"
+    tabindex="0"
+    (click)="imageInput.click()" (keyup.enter)="imageInput.click()"
+    [src]="image ?? 'assets/images/default-photo.png'" alt="foto de perfil"
+  >
+  @if (!image) {
+    <p class="text-sm mt-1">Adicione a logo da loja</p>
+  }
+</div>
+
+<input
+  #imageInput
+  class="hidden"
+  type="file"
+  [multiple]="false"
+  (change)="onFileChange($event)"
+  (click)="imageInput.value = ''"
+>

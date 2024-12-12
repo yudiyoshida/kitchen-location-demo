@@ -1,0 +1,42 @@
+<div class="h-48 w-full rounded-md border-2 border-dashed border-zinc-400 cursor-pointer overflow-hidden relative">
+  @if (!image) {
+    <div
+      tabindex="0"
+      class="h-full flex flex-col justify-center items-center gap-2 text-center p-3"
+      (click)="imageInput.click()"
+      (keyup.enter)="imageInput.click()"
+    >
+      <mat-icon class="scale-125">add_photo_alternate</mat-icon>
+      <p class="text-sm break-words">Clique aqui para selecionar uma imagem</p>
+    </div>
+  }
+  @else {
+    <div
+      tabindex="0"
+      class="absolute top-2 right-2"
+      (click)="clearImage()"
+      (keyup.enter)="clearImage()"
+    >
+      <button mat-mini-fab>
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+    <div
+      tabindex="0"
+      class="h-full w-full object-cover"
+      (click)="openImagePreview()"
+      (keyup.enter)="openImagePreview()"
+    >
+      <img [src]="image" alt="" class="h-full w-full object-cover">
+    </div>
+  }
+</div>
+
+<input
+  #imageInput
+  class="hidden"
+  type="file"
+  [multiple]="false"
+  (change)="openImageCropper($event)"
+  (click)="imageInput.value = ''"
+>

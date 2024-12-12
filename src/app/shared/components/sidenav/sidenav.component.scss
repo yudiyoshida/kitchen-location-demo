@@ -1,0 +1,18 @@
+.sidenav {
+  width: 256px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  height: 7rem;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.active-link {
+  @apply bg-red-400;
+}

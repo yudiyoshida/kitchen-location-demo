@@ -1,0 +1,23 @@
+<div [ngClass]="{
+  'text-start': align === 'start',
+  'text-center': align === 'center',
+  'text-end': align === 'end'
+}">
+  <div class="">
+    @if(showEdit) {
+      <button mat-icon-button (click)="editClick.emit()">
+        <mat-icon>edit</mat-icon>
+      </button>
+    }
+    @if(showDelete) {
+      <button mat-icon-button (click)="deleteClick.emit()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    }
+    @if (showToggle) {
+      <button mat-icon-button (click)="toggleClick.emit()">
+        <mat-icon>toggle_on</mat-icon>
+      </button>
+    }
+  </div>
+</div>

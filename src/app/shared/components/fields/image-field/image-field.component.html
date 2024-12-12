@@ -1,0 +1,10 @@
+<div class="h-48 w-full rounded-md border-2 border-dashed border-zinc-400 cursor-pointer overflow-hidden relative">
+  <div
+    tabindex="0"
+    class="h-full w-full object-cover"
+    (click)="openImagePreview()"
+    (keyup.enter)="openImagePreview()"
+  >
+    <img [src]="image" alt="" class="h-full w-full object-cover">
+  </div>
+</div>

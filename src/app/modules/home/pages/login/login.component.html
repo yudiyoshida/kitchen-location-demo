@@ -1,0 +1,22 @@
+<app-home-container
+  image="assets/images/kitchen-bg.jpeg"
+  title="Seja bem-vindo(a)!"
+  subtitle="Para acessar a plataforma, insira seus dados abaixo:"
+>
+  <form class="grid gap-4" [formGroup]="form">
+    <app-email-input [control]="form.controls.email" />
+    <app-password-input [control]="form.controls.password" />
+    
+    <div>
+      <span>Esqueceu a senha? </span>
+      <button type="button" class="text-primary font-bold cursor-pointer" (click)="gotoForgotPassword()">Clique aqui!</button>
+    </div>
+  
+    <app-button-flat
+      label="Entrar"
+      type="submit"
+      [disabled]="form.invalid"
+      (clickEvent)="submit()"
+    />
+  </form>
+</app-home-container>

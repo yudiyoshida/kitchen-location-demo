@@ -1,0 +1,14 @@
+<mat-form-field appearance="outline" class="w-full" subscriptSizing="dynamic">
+  <mat-label>{{ label }}</mat-label>
+  <mat-select [formControl]="control" (valueChange)="valueChange.emit($event)">
+    @if (includeAllOptions) {
+      <mat-option value="">Todas</mat-option>
+    }
+    @if (!includeAllOptions && options?.length === 0) {
+      <mat-option disabled>Nenhuma opção disponível</mat-option>
+    }
+    @for (option of options; track $index) {
+      <mat-option [value]="option[optionKey]">{{ option[optionLabel] }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
