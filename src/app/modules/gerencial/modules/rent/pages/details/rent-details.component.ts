@@ -29,9 +29,10 @@ export class RentDetailsComponent implements OnInit {
   public events: TimelineEvent[] = [
     { icon: 'restart_alt', completed: true, title: 'Aguardando' },
     { icon: 'check_circle', completed: true, title: 'Confirmado' },
-    { icon: 'task', completed: false, title: 'Em separação' },
+    { icon: 'task', completed: true, title: 'Em separação' },
     { icon: 'local_shipping', completed: false, title: 'Em transporte' },
-    { icon: 'check_circle', completed: false, title: 'Entregue' },
+    { icon: 'blender', completed: false, title: 'Entregue' },
+    { icon: 'check_circle', completed: false, title: 'Devolvido' },
   ];
 
   constructor(
