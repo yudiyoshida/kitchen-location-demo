@@ -4,6 +4,9 @@
       <ng-container [matColumnDef]="item.key">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ item.label }}</th>
         @switch (item.type) {
+          @case ('currency') {
+            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | currency }}</td>
+          }
           @default {
             <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | textTooLarge }}</td>
           }

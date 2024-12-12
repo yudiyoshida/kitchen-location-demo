@@ -67,9 +67,9 @@ export class ProductService {
   }
 
   public findById(id: string): Observable<ProductResponse> {
-    const Product = this.data.find((Product) => Product.id === id);
+    const product = this.data.find((product) => product.id === id);
 
-    return of(Product || {} as ProductResponse);
+    return of(product || {} as ProductResponse);
   }
 }
 

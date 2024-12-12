@@ -9,6 +9,7 @@ export const routes: Routes = [
       { path: '', pathMatch: 'full', redirectTo: 'clientes' },
       { path: 'clientes', loadChildren: () => import('./modules/clients/clients.routes').then(m => m.routes) },
       { path: 'produtos', loadChildren: () => import('./modules/products/products.routes').then(m => m.routes) },
+      { path: 'financeiro', loadChildren: () => import('./modules/financial/financial.routes').then(m => m.routes) },
     ],
   },
 ];

@@ -1,0 +1,8 @@
+<div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+  <app-search-input class="w-full sm:w-1/2" />
+</div>
+<app-commom-table
+  [data]="financial"
+  [columns]="columns"
+  [totalItems]="totalFinancials"
+/>
