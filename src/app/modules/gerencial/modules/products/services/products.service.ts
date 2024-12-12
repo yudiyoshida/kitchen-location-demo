@@ -21,7 +21,7 @@ export class ProductService {
       name: 'Coifa Industrial Inox',
       category: 'Ventilação',
       description: 'Coifa em aço inox para exaustão de fumaça e vapores em cozinhas industriais.',
-      imageUrl: 'https://wtinox.ind.br/wp-content/uploads/2021/05/coifa-quatro-aguas-inox.jpg',
+      imageUrl: 'https://coifadeinox.com.br/wp-content/uploads/2024/11/coifa-02.png',
       stock: 2,
       createdAt: '01/03/2024',
       updatedAt: '01/03/2024',
