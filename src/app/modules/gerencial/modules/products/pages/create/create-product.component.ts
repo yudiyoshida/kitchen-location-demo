@@ -40,7 +40,7 @@ export class CreateProductComponent {
   public submit(): void {
     const image = this.productImage.file;
     if (!image) {
-      this.toastr.error('Selecione uma imagem para o product');
+      this.toastr.error('Selecione uma imagem para o produto');
       return;
     }
 
