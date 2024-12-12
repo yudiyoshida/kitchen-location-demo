@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ButtonFlatComponent } from '../../../../../../shared/components/button-flat/button-flat.component';
 import { Column, CommomTableComponent } from '../../../../../../shared/components/commom-table/commom-table.component';
 import { SearchInputComponent } from '../../../../../../shared/components/inputs/search-input/search-input.component';
 import { ProductResponse, ProductService } from '../../services/products.service';
@@ -10,6 +11,7 @@ import { ProductResponse, ProductService } from '../../services/products.service
   templateUrl: './list-products.component.html',
   styleUrl: './list-products.component.scss',
   imports: [
+    ButtonFlatComponent,
     CommomTableComponent,
     SearchInputComponent,
   ],
@@ -39,6 +41,10 @@ export class ListProductsComponent implements OnInit {
     this.productService.findAll().subscribe((products) => {
       this.products = products;
     });
+  }
+
+  public gotoCreate(): void {
+    this.router.navigate(['cadastrar'], { relativeTo: this.activatedRoute });
   }
 
   public gotoDetails(product: ProductResponse): void {

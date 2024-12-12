@@ -17,7 +17,7 @@
       (click)="clearImage()"
       (keyup.enter)="clearImage()"
     >
-      <button mat-mini-fab>
+      <button mat-mini-fab color="primary">
         <mat-icon>delete</mat-icon>
       </button>
     </div>
@@ -37,6 +37,6 @@
   class="hidden"
   type="file"
   [multiple]="false"
-  (change)="openImageCropper($event)"
+  (change)="setImage($event)"
   (click)="imageInput.value = ''"
 >

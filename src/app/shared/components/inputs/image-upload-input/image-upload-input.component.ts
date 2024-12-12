@@ -2,7 +2,6 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
-import { ImageCropperCustomComponent, ImageCropperData } from '../../../../image-cropper/image-cropper.component';
 import { ImagePreviewDialogComponent } from '../../../dialogs/image-preview-dialog/image-preview-dialog.component';
 
 export type FileUpload = File | string | null | undefined;
@@ -45,22 +44,6 @@ export class ImageUploadInputComponent implements OnChanges {
         this.image = reader.result;
       };
     }
-  }
-
-  public openImageCropper(event: any): void {
-    // open image cropper
-    const data: ImageCropperData = {
-      aspectRatio: 1 / 1,
-      maintainAspectRatio: false,
-      imageChangedEvent: event,
-      roundCropper: false,
-    };
-
-    this.dialog.open(ImageCropperCustomComponent, {
-      data,
-      height: '80%',
-      width: '50%',
-    });
   }
 
   public setImage(event: any): void {

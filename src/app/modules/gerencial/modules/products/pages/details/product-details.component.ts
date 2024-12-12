@@ -5,17 +5,17 @@ import { PhotoFieldComponent } from '../../../../../../shared/components/fields/
 import { ProductResponse, ProductService } from '../../services/products.service';
 
 @Component({
-  selector: 'app-products-details',
+  selector: 'app-product-details',
   standalone: true,
-  templateUrl: './products-details.component.html',
-  styleUrl: './products-details.component.scss',
+  templateUrl: './product-details.component.html',
+  styleUrl: './product-details.component.scss',
   imports: [
     MatCardModule,
     InfoFieldComponent,
     PhotoFieldComponent,
   ],
 })
-export class ProductsDetailsComponent implements OnInit {
+export class ProductDetailsComponent implements OnInit {
   @Input() productId!: string;
 
   public product?: ProductResponse;
