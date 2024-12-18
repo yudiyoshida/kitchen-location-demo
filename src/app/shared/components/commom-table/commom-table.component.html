@@ -7,6 +7,9 @@
           @case ('currency') {
             <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | currency }}</td>
           }
+          @case ('date') {
+            <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | date:'dd/MM/yyyy' }}</td>
+          }
           @default {
             <td mat-cell *matCellDef="let row">{{ getNestedValue(row, item.key) | textTooLarge }}</td>
           }

@@ -1,10 +1,8 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { ImagePreviewDialogComponent } from '../../../dialogs/image-preview-dialog/image-preview-dialog.component';
-
-export type FileUpload = File | string | null | undefined;
 
 @Component({
   selector: 'app-image-upload-input',
@@ -17,9 +15,8 @@ export type FileUpload = File | string | null | undefined;
   ],
 })
 export class ImageUploadInputComponent implements OnChanges {
+  public file?: File |null;
   protected image?: string | ArrayBuffer | null;
-
-  @Input() file: FileUpload;
 
   constructor(
     private dialog: MatDialog,

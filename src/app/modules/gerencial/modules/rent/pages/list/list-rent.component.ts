@@ -24,8 +24,8 @@ export class ListRentComponent implements OnInit {
     { label: 'Produto', key: 'productName', type: 'text' },
     { label: 'Valor (R$)', key: 'amount', type: 'currency' },
     { label: 'Status', key: 'status', type: 'text' },
-    { label: 'Data inicio', key: 'startDate', type: 'date' },
-    { label: 'Data fim', key: 'endDate', type: 'date' },
+    { label: 'Data inicio', key: 'startDate', type: 'text' },
+    { label: 'Data fim', key: 'endDate', type: 'text' },
   ];
 
   constructor(

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProductInfoComponent } from '../../components/product-info/product-info.component';
-import { ProductResponse, ProductService } from '../../services/products.service';
+import { ProductResponse, ProductService } from '../../services/products/products.service';
 
 @Component({
   selector: 'app-product-details',
@@ -21,10 +21,10 @@ export class ProductDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.Product();
+    this.getProduct();
   }
 
-  private Product(): void {
+  private getProduct(): void {
     this.productService.findById(this.productId).subscribe((product) => {
       this.product = product;
     });

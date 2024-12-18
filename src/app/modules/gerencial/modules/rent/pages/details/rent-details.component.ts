@@ -4,7 +4,7 @@ import { ButtonFlatComponent } from '../../../../../../shared/components/button-
 import { InfoFieldComponent } from '../../../../../../shared/components/fields/info-field/info-field.component';
 import { TimelineComponent, TimelineEvent } from '../../../../../../shared/components/timeline/timeline.component';
 import { ProductInfoComponent } from '../../../products/components/product-info/product-info.component';
-import { ProductResponse, ProductService } from '../../../products/services/products.service';
+import { ProductResponse, ProductService } from '../../../products/services/products/products.service';
 import { RentResponse, RentService } from '../../services/rent.service';
 
 @Component({

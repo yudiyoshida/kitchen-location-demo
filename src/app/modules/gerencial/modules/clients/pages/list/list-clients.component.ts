@@ -22,7 +22,7 @@ export class ListClientsComponent implements OnInit {
     { label: 'Nome', key: 'name', type: 'text' },
     { label: 'E-mail', key: 'email', type: 'text' },
     { label: 'Telefone', key: 'phone', type: 'phone' },
-    { label: 'Conta criada em', key: 'createdAt', type: 'date' },
+    { label: 'Conta criada em', key: 'createdAt', type: 'text' },
   ];
 
   constructor(

@@ -24,7 +24,7 @@ export class ListPurchaseComponent implements OnInit {
     { label: 'Produtos qtd', key: 'products', type: 'text' },
     { label: 'Valor (R$)', key: 'amount', type: 'currency' },
     { label: 'Status', key: 'status', type: 'text' },
-    { label: 'Data transação', key: 'createdAt', type: 'date' },
+    { label: 'Data transação', key: 'createdAt', type: 'text' },
   ];
 
   constructor(

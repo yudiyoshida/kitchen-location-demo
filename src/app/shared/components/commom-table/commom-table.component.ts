@@ -1,4 +1,4 @@
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, DatePipe } from '@angular/common';
 import { AfterViewInit, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
@@ -22,6 +22,7 @@ export type PaginationEvent = {
   templateUrl: './commom-table.component.html',
   styleUrl: './commom-table.component.scss',
   imports: [
+    DatePipe,
     CurrencyPipe,
     MatTableModule,
     MatPaginatorModule,

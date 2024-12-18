@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Column, CommomTableComponent } from '../../../../../../shared/components/commom-table/commom-table.component';
 import { SearchInputComponent } from '../../../../../../shared/components/inputs/search-input/search-input.component';
 import { FinancialResponse, FinancialService } from '../../services/financial.service';
@@ -24,13 +23,11 @@ export class ListFinancialsComponent implements OnInit {
     { label: 'Produto', key: 'productName', type: 'text' },
     { label: 'Valor (R$)', key: 'amount', type: 'currency' },
     { label: 'Status', key: 'status', type: 'text' },
-    { label: 'Data transação', key: 'createdAt', type: 'date' },
+    { label: 'Data transação', key: 'createdAt', type: 'text' },
   ];
 
   constructor(
     private financialService: FinancialService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {

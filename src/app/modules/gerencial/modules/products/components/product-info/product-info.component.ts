@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { InfoFieldComponent } from '../../../../../../shared/components/fields/info-field/info-field.component';
 import { PhotoFieldComponent } from '../../../../../../shared/components/fields/photo-field/photo-field.component';
-import { ProductResponse } from '../../services/products.service';
+import { ProductResponse } from '../../services/products/products.service';
 
 @Component({
   selector: 'app-product-info',
