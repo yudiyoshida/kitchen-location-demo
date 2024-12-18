@@ -8,6 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { map, shareReplay } from 'rxjs/operators';
+import { StorageService } from '../../../core/authentication/services/storage.service';
 import { SidenavLinkComponent } from './components/sidenav-link/sidenav-link.component';
 import { TitleComponent } from './components/title/title.component';
 
@@ -42,6 +43,7 @@ export class SidenavComponent {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private router: Router,
+    private storageService: StorageService,
   ) {}
 
   // Breakpoints.Handset = 960px
@@ -51,6 +53,7 @@ export class SidenavComponent {
   );
 
   public logout() {
+    this.storageService.removeToken();
     this.router.navigate(['/']);
   }
 }
