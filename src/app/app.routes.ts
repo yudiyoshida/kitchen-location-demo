@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { authenticationGuard } from './core/guards/authentication.guard';
 
 export const routes: Routes = [
   {
@@ -13,5 +14,6 @@ export const routes: Routes = [
   {
     path: 'gerencial',
     loadChildren: () => import('./modules/gerencial/gerencial.routes').then(m => m.routes),
+    canActivateChild: [authenticationGuard],
   },
 ];
