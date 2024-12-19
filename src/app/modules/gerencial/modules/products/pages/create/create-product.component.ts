@@ -37,6 +37,7 @@ export class CreateProductComponent implements OnInit {
     description: ['', [Validators.required]],
     stock: ['', [Validators.required]],
     categoryId: ['', [Validators.required]],
+    price: ['', [Validators.required]],
   });
 
   ngOnInit(): void {

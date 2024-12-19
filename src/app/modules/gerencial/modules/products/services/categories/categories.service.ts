@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
+import { environment } from '../../../../../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root',
@@ -8,25 +9,8 @@ import { Observable, of } from 'rxjs';
 export class CategoryService {
   constructor(private http: HttpClient) {}
 
-  // public findAll(): Observable<CategoryResponse[]> {
-  //   return this.http.get<CategoryResponse[]>(`${environment.api}/admin/categories`);
-  // }
-
   public findAll(): Observable<CategoryResponse[]> {
-    return of([
-      {
-        id: '1',
-        name: 'Category 1',
-      },
-      {
-        id: '2',
-        name: 'Category 2',
-      },
-      {
-        id: '3',
-        name: 'Category 3',
-      },
-    ]);
+    return this.http.get<CategoryResponse[]>(`${environment.api}/admin-products/all-categories`);
   }
 }
 

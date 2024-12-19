@@ -9,6 +9,6 @@ export class TextTooLargePipe implements PipeTransform {
     if (value === undefined) {
       return '';
     }
-    return value.length > length ? `${value.slice(0, length)}...` : value;
+    return value?.length > length ? `${value.slice(0, length)}...` : value;
   }
 }

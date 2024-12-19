@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../../../../../environments/environment.development';
+import { CategoryResponse } from '../categories/categories.service';
 
 @Injectable({
   providedIn: 'root',
@@ -26,7 +27,7 @@ export type ProductResponse = {
   id: string;
   name: string;
   description: string;
-  category: string;
+  categories: CategoryResponse[];
   fileUrl: string;
   fileKey: string;
   stock: number;

@@ -40,7 +40,10 @@ export class ListProductsComponent implements OnInit {
 
   private findAllProducts(): void {
     this.productService.findAll().subscribe((products) => {
-      this.products = products;
+      this.products = products.map((product) => ({
+        ...product,
+        category: product.categories[0].name,
+      }));
     });
   }
 
