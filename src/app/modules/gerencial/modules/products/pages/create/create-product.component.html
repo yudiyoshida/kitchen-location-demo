@@ -5,8 +5,8 @@
         <app-text-input label="Nome" [control]="form.controls.name" />
         <div class="grid sm:grid-cols-3 gap-4">
           <app-select-input label="Categoria" [control]="form.controls.categoryId" [options]="categories" optionKey="id" optionLabel="name" />
-          <app-text-input label="Estoque" [control]="form.controls.stock" />
-          <app-text-input label="Preço (R$)" [control]="form.controls.price" />
+          <app-number-input label="Estoque" [control]="form.controls.stock" />
+          <app-number-input label="Preço (R$)" [control]="form.controls.price" />
         </div>
         <app-textarea-input label="Descrição" [control]="form.controls.description" />
         <app-image-upload-input #productImage />

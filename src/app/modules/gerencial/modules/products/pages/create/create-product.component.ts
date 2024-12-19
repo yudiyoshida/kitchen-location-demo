@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { ToastrService } from 'ngx-toastr';
 import { ButtonFlatComponent } from '../../../../../../shared/components/button-flat/button-flat.component';
 import { ImageUploadInputComponent } from '../../../../../../shared/components/inputs/image-upload-input/image-upload-input.component';
+import { NumberInputComponent } from '../../../../../../shared/components/inputs/number-input/number-input.component';
 import { SelectInputComponent } from '../../../../../../shared/components/inputs/select-input/select-input.component';
 import { TextInputComponent } from '../../../../../../shared/components/inputs/text-input/text-input.component';
 import { TextareaInputComponent } from '../../../../../../shared/components/inputs/textarea-input/textarea-input.component';
@@ -22,6 +23,7 @@ import { UploadFileResponse, UploadFileService } from '../../services/upload-fil
     ReactiveFormsModule,
     ButtonFlatComponent,
     ImageUploadInputComponent,
+    NumberInputComponent,
     SelectInputComponent,
     TextareaInputComponent,
     TextInputComponent,
